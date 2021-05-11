@@ -41,8 +41,8 @@ STEP4: Use POSTMAN for the following CRUD Operations
 
 
 
-Demo link
-https://zuri-crud-task-app.herokuapp.com/
+githublink
 
-Author
+
+Author:
 Kamal
