@@ -3,7 +3,7 @@ Nodejs Task @Zuri_Training
 
 DOCS IN SUMMARY 
 
-This task made use of the following Tech:
+This task made use of the following Techs:
 -Node.js
 -Express
 -mongoose
@@ -41,8 +41,6 @@ STEP4: Use POSTMAN for the following CRUD Operations
 
 
 
-githublink
+github_repo: https://github.com/kamal-gith/CRUD_app.git
 
-
-Author:
-Kamal
+Author: Kamal
