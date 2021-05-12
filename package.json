@@ -1,0 +1,29 @@
+{
+  "name": "CRUD_app",
+  "version": "1.0.0",
+  "description": "Nodejs Task @Zuri_Training",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamal-gith/CRUD_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamal-gith/CRUD_app/issues"
+  },
+  "homepage": "https://github.com/kamal-gith/CRUD_app#readme",
+  "dependencies": {
+    "dotenv": "^9.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
