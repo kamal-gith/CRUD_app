@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 
-const user_routes = require('../controllers/data_contrl');
+const user_routes = require('../controller/data_contrl');
 
 router.post('/users', user_routes.createNewStudent);
 
