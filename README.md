@@ -42,6 +42,6 @@ STEP4: Use POSTMAN for the following CRUD Operations
 
 
 github_repo: https://github.com/kamal-gith/CRUD_app.git
-Heroku Link: https://kamalai.herokuapp.com/
+Heroku Demo_Link: https://kamalai.herokuapp.com/
 
 Author: Kamal
