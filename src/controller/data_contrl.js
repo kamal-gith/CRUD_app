@@ -1,61 +1,61 @@
-const Student = require("../models/models");
+const Player = require("../models/models");
 
-exports.createNewStudent = (req, res) => {
-    Student.create({
+exports.createNewPlayer = (req, res) => {
+    Player.create({
         name: req.body.name,
         email: req.body.email,
         country: req.body.country
-    }, (err, newStudent) => {
+    }, (err, newPlayer) => {
         if (err) {
             return res.status(500).json({ message: err });
         } else {
-            return res.status(200).json({ message: "New student has been created succesfully...", newStudent});
+            return res.status(200).json({ message: "New Player has been created succesfully...", newPlayer});
         }
     });
 };
 
-// TO GET ALL STUDENTS...
-exports.fetchStudents = (req, res) => {
-    Student.find({}, (err, students) => {
+// TO GET ALL PlayerS...
+exports.fetchPlayers = (req, res) => {
+    Player.find({}, (err, Players) => {
         if (err) {
             return res.status(500).json({ message: err });
         } else {
-            return res.status(200).json({ message: students });
+            return res.status(200).json({ message: Players });
         }
     });
 };
 
-//TO GET JUST A SINGLE STUDENT...
-exports.fetchStudent = (req, res) => {
-    Student.findById(req.params.id, (err, student) => {
+//TO GET JUST A SINGLE Player...
+exports.fetchPlayer = (req, res) => {
+    Player.findById(req.params.id, (err, Player) => {
         if (err) {
             return res.status(500).json({ message: err });
-        } else if (!student) {
-            return res.status(404).json({ message: "No student with that detail here, please try again.." });
+        } else if (!Player) {
+            return res.status(404).json({ message: "No Player with that detail here, please try again.." });
         } else {
-            return res.status(200).json({ student });
+            return res.status(200).json({ Player });
         }
     });
 };
 
-// TO UPDATE A STUDENT'S DETAILS
-exports.updateStudent = (req, res) => {
-    Student.findByIdAndUpdate(req.params.id, {
+// TO UPDATE A Player'S DETAILS
+exports.updatePlayer = (req, res) => {
+    Player.findByIdAndUpdate(req.params.id, {
         name: req.body.name
-    }, (err, student) => {
+    }, (err, Player) => {
         if (err) {
             return res.status(500).json({ message: err });
-        } else if (!student) {
+        } else if (!Player) {
             return res.status(404).json(
-              { message: "Student with this detail is not found in our database, check your info and try again.... "});
+              { message: "Player with this detail is not found in our database, check your info and try again.... "});
         } else {
-            student.save((err, updatedStudent) => {
+            Player.save((err, updatedPlayer) => {
                 if (err) {
                     return res.status(500).json({ message: err });
                 } else {
                     return res.status(200).json(
                       { 
-                      message: "Student's details updated successfully...." 
+                      message: "Player's details updated successfully...." 
                     });
                 }
             });
@@ -63,14 +63,14 @@ exports.updateStudent = (req, res) => {
     });
 };
 
-exports.deleteStudent = (req, res) => {
-    Student.findByIdAndDelete(req.params.id, (err, student) => {
+exports.deletePlayer = (req, res) => {
+    Player.findByIdAndDelete(req.params.id, (err, Player) => {
         if (err) {
             return res.status(500).json({ message: err });
-        } else if (!student) {
-            return res.status(404).json({ message: "There is no student with these details in our database..." });
+        } else if (!Player) {
+            return res.status(404).json({ message: "There is no Player with these details in our database..." });
         } else {
-            return res.status(200).json({ message: "Student's record has suucessfully been deleted from our database..." });
+            return res.status(200).json({ message: "Player's record has suucessfully been deleted from our database..." });
         }
     });
 };
