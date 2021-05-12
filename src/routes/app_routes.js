@@ -14,8 +14,5 @@ router.put('/users/_id', user_routes.updateStudent);
 
 router.delete('/users/_id', user_routes.deleteStudent);
 
-// o3KJeuK9w2FWIyWX
-
-// mongodb+srv://kamalai:<password>@cluster0.mu2f9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
 module.exports = router;

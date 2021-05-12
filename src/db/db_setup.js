@@ -3,8 +3,6 @@ require("dotenv").config();
 
 const MONGO_URI = "mongodb+srv://kamalai:o3KJeuK9w2FWIyWX@cluster0.mu2f9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
-// const MONGO_URI = process.env;
-
 const db = () => {
     mongoose.connect(MONGO_URI, {
        useNewUrlParser: true,
